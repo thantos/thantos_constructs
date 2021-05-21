@@ -1,0 +1,45 @@
+{
+  "name": "@thantos/sfn-semaphore",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Sam <sussmansa@gmail.com>",
+  "homepage": "https://github.com/thantos/thantos_constructs#readme",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thantos/thantos_constructs.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/thantos/thantos_constructs/issues"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-sfn": "^3.16.0",
+    "@aws-sdk/client-sqs": "^3.16.0",
+    "aws-cdk-lib": "^2.0.0-rc.4",
+    "aws-lambda": "^1.0.6",
+    "constructs": "^10.0.5"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "^2.0.0-rc.4",
+    "constructs": "^10.0.5"
+  },
+  "dependencies": {
+    "@thantos/cdk_extensions": "^0.0.0"
+  }
+}
