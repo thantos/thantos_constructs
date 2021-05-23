@@ -2,7 +2,7 @@ import { IFunction } from "aws-cdk-lib/aws-lambda";
 
 export type MDIntegration = LambdaMergeDeployIntegration; // Add step functions
 
-interface LambdaMergeDeployIntegration {
+export interface LambdaMergeDeployIntegration {
   type: 'Lambda';
   func: IFunction;
 }
@@ -15,3 +15,5 @@ export abstract class MergeDeployIntegration {
     } as LambdaMergeDeployIntegration;
   }
 }
+
+export * from './lambda';

@@ -2,3 +2,12 @@ node_modules/
 lerna-debug.log
 npm-debug.log
 packages/*/dist
+
+*.js
+!jest.config.js
+*.d.ts
+*.js.map
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
