@@ -161,7 +161,7 @@ export class DeployerMachine extends Construct {
       this,
       'flipStageParamFunction',
       {
-        entry: path.resolve('lib/functions/updateStageParameter/index.ts')
+        entry: path.resolve(__dirname, '../functions/updateStageParameter/index.js')
       }
     );
 

@@ -70,7 +70,7 @@ export class SfnSemaphore extends Construct {
     });
 
     const manageLockQueueProps: Partial<NodejsFunctionProps> = {
-      entry: path.resolve("lib/functions/manageLockQueue/index.ts"),
+      entry: path.resolve(__dirname, "../functions/manage-queue.js"),
       environment: {
         DEPLOYMENT_QUEUE_URL: this.deploymentQueue.queueUrl,
       },

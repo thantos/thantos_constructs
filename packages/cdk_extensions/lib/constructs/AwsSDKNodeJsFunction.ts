@@ -31,7 +31,7 @@ export class AwsSDKNodejsFunction extends NodejsFunction {
     const awsSdkLayer =
       (stack.node.tryFindChild(AWS_SDK_LAYER_ID) as LayerVersion) ??
       new LayerVersion(stack, AWS_SDK_LAYER_ID, {
-        code: Code.fromAsset(path.resolve("dist/layer"), { bundling: {
+        code: Code.fromAsset(path.resolve("."), { bundling: {
             local: new AwsSdkLocalBundle(),
             image: DockerImage.fromRegistry('dummy') 
         } }),
@@ -45,7 +45,8 @@ class AwsSdkLocalBundle implements ILocalBundling {
     // TODO: support more platforms and be smarter
     // TODO: Test this
     tryBundle(outputDir: string, options: BundlingOptions): boolean {
-        exec('bash', ['-c', [`mkdir -p dist/layer/nodejs && cp package-lock.json dist/layer/nodejs/ && npm install $(npm ls --parseable | grep @aws-sdk | rev | cut -d'/' -f 1,2 | rev | tr '\n\r' ' ') --prefix dist/layer/nodejs`].join()] )
+        console.log(outputDir); // TODO remove
+        exec('bash', ['-c', [`mkdir -p ${outputDir}/nodejs && cp package-lock.json ${outputDir}/nodejs/ && npm install $(npm ls --parseable | grep @aws-sdk | rev | cut -d'/' -f 1,2 | rev | tr '\n\r' ' ') --prefix ${outputDir}/nodejs`].join()] )
         return true;
     }
 }
