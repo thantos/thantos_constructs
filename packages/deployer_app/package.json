@@ -1,6 +1,7 @@
 {
   "name": "deployer_app",
   "version": "0.1.0",
+  "private": "true",
   "bin": {
     "deployer_app": "bin/deployer_app.js"
   },
