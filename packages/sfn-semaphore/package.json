@@ -43,5 +43,6 @@
   },
   "dependencies": {
     "@thantos/cdk_extensions": "^1.0.0-alpha.0"
-  }
+  },
+  "gitHead": "bfcb1b667447928cd3f4768cf0b4ba1371e71eb0"
 }
