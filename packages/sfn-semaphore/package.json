@@ -1,6 +1,6 @@
 {
   "name": "@thantos/sfn-semaphore",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "description": "> TODO: description",
   "author": "Sam <sussmansa@gmail.com>",
   "homepage": "https://github.com/thantos/thantos_constructs#readme",
@@ -42,7 +42,7 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@thantos/cdk_extensions": "^1.0.0-alpha.0"
+    "@thantos/cdk_extensions": "^1.0.1-alpha.0"
   },
   "gitHead": "bfcb1b667447928cd3f4768cf0b4ba1371e71eb0"
 }
