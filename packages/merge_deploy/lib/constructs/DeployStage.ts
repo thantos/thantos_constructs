@@ -5,13 +5,13 @@ import { MDIntegration } from '../types';
 export interface DeployStageProps {
   name?: string;
   testFunction?: MDIntegration;
-  prepareFuntion?: MDIntegration;
+  prepareFunction?: MDIntegration;
 }
 
 export class DeployStage extends Construct {
   readonly name: string;
   readonly testFunction?: MDIntegration;
-  readonly prepareFuntion?: MDIntegration;
+  readonly prepareFunction?: MDIntegration;
 
   constructor(
     scope: Construct,
@@ -22,6 +22,6 @@ export class DeployStage extends Construct {
 
     this.name = props.name || Names.nodeUniqueId(this.node);
     this.testFunction = props.testFunction;
-    this.prepareFuntion = props.prepareFuntion;
+    this.prepareFunction = props.prepareFunction;
   }
 }

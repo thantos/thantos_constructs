@@ -1,6 +1,7 @@
 # `@thantos/sfn-semaphore`
 
-![experimental](http://badges.github.io/stability-badges/dist/experimental.svg) ![npm peer dependency version](https://img.shields.io/npm/dependency-version/aws-cdk-lib/peer/%5E2.0.0-rc.4) ![npm dev dependency version](https://img.shields.io/npm/dependency-version/constructs/peer/%5E10)
+![experimental](http://badges.github.io/stability-badges/dist/experimental.svg) ![npm peer dependency version](https://img.shields.io/npm/dependency-version/@thantos/sfn-semaphore/peer/aws-cdk-lib.svg) ![npm dev dependency version](https://img.shields.io/npm/dependency-version/@thantos/sfn-semaphore/peer/constructs.svg) ![npm dev dependency version](https://img.shields.io/npm/dependency-version/@thantos/sfn-semaphore/peer/@aws-sdk/client-sfn.svg)
+![npm dev dependency version](https://img.shields.io/npm/dependency-version/@thantos/sfn-semaphore/peer/@aws-sdk/client-sqs.svg)
 
 An implementation of a semaphore for use with AWS Standard Step Functions. 
 

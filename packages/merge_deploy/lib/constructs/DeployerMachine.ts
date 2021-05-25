@@ -365,9 +365,9 @@ export class DeployerMachine extends Construct {
                 flipStage(stage.name, JsonPath.stringAt('$$.Execution.Name'))
               )
               .next(
-                stage.prepareFuntion
+                stage.prepareFunction
                   ? new LambdaInvoke(this, `prepareStage${stage.name}`, {
-                      lambdaFunction: stage.prepareFuntion.func,
+                      lambdaFunction: stage.prepareFunction.func,
                       resultPath: DISCARD,
                       payload: TaskInput.fromObject({}) // TODO figure this out
                     })

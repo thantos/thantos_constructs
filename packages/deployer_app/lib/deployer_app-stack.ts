@@ -9,26 +9,17 @@ export class DeployerAppStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const validateManifestFunction = new AwsSDKNodejsFunction(
-      this,
-      'validateManifestFunction',
-      {
-        entry: path.resolve('lib/functions/validateManifest/index.ts')
-      }
-    );
-
-    const mergeFunction = new AwsSDKNodejsFunction(this, 'mergeFunction', {
-      entry: path.resolve('lib/functions/merge/index.ts')
+    const validateManifestFunction = new AwsSDKNodejsFunction(this, 'validateManifestFunction', {
+      entry: path.resolve('lib/functions/validateManifest/index.ts')
     });
-
-    // TODO: make this a parameter.
-    const stateTransformFunction = new AwsSDKNodejsFunction(
-      this,
-      'stateTransformFunction',
-      {
+    
+    const mergeFunction = new AwsSDKNodejsFunction(this, 'mergeFunction', {
+        entry: path.resolve('lib/functions/merge/index.ts')
+    });
+    
+    const stateTransformFunction = new AwsSDKNodejsFunction(this, 'stateTransformFunction', {
         entry: path.resolve('lib/functions/transform/index.ts')
-      }
-    );
+    });
 
     const smd = new MergeDeploy(this, 'mergeDeploy', {
       mergeFunction: MergeDeployIntegration.fromLambda(mergeFunction),
