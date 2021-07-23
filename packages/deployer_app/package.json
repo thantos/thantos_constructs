@@ -19,7 +19,8 @@
     "@thantos/merge_deploy_tester": "^1.0.4-alpha.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
-    "aws-cdk-lib": "2.0.0-rc.4",
+    "aws-cdk-lib": "2.0.0-alpha.14",
+    "constructs": "10.0.0",
     "esbuild": "^0.12.1",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
@@ -30,8 +31,6 @@
     "@aws-sdk/client-sfn": "^3.16.0",
     "@aws-sdk/client-sqs": "^3.16.0",
     "@aws-sdk/client-ssm": "^3.16.0",
-    "aws-cdk-lib": "2.0.0-rc.4",
-    "constructs": "^10.0.0",
     "source-map-support": "^0.5.16"
   }
 }

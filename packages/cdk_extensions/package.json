@@ -28,13 +28,13 @@
   "bugs": {
     "url": "https://github.com/thantos/thantos_constructs/issues"
   },
-  "devDependencies": {
-    "aws-cdk-lib": "^2.0.0-rc.4",
-    "constructs": "^10.0.5"
-  },
   "peerDependencies": {
     "aws-cdk-lib": "^2.0.0-rc.4",
     "constructs": "^10.0.5"
   },
-  "gitHead": "bfcb1b667447928cd3f4768cf0b4ba1371e71eb0"
+  "gitHead": "bfcb1b667447928cd3f4768cf0b4ba1371e71eb0",
+  "devDependencies": {
+    "aws-cdk-lib": "2.0.0-alpha.14",
+    "constructs": "10.0.0"
+  }
 }
